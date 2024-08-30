@@ -1,7 +1,7 @@
 // import axios, { AxiosResponse } from 'axios';
 import Cookies from 'js-cookie';
 import axios from 'axios';
-const API_URL = 'http://localhost:3000/api/mcq';
+const API_URL = 'https://v2-1o3a.onrender.com/mcq';
 
 interface ExamData {
     instruction: string;

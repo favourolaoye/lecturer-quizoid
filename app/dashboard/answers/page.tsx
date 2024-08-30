@@ -14,7 +14,7 @@ export default function Page() {
     if (lecturerID) {
       axios
         .get(
-          `http://localhost:3000/api/answers/getStudentAnswers?lecturerID=${lecturerID}`
+          `https://v2-1o3a.onrender.com/answers/getStudentAnswers?lecturerID=${lecturerID}`
         )
         .then((response) => {
           setStudents(response.data);
