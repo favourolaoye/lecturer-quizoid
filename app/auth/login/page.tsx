@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/app/contexts/UserContext';
-const url = "https://v2-1o3a.onrender.com";
+const url = "https://v2-1o3a.onrender.com/api";
 
 export default function Login() {
   const router = useRouter(); 
