@@ -15,7 +15,7 @@ const TheoryExamPageContent = () => {
         // Handle the submit logic here
         toast.success(`Creating multi-choice exam for ${code}`);
         console.log(data);
-        router.push('/dashboard/lecturer/manage-courses');
+        router.push('/dashboard/manage-courses');
     };
 
     return (
