@@ -71,7 +71,7 @@ export default function ManageCourses() {
 
     const handleSelectExamType = (type: 'theory' | 'multichoice')=> {
         if (selectedCourse) {
-            router.push(`/dashboard/lecturer/exam-form/${type}?code=${selectedCourse.code}&action=create`);
+            router.push(`/dashboard/exam-form/${type}?code=${selectedCourse.code}&action=create`);
         }
         setIsModalOpen(false);
     };
@@ -83,7 +83,7 @@ export default function ManageCourses() {
             console.log(response)
             if (response.status === 200) {
                 if (course.examType) {
-                router.push(`/dashboard/lecturer/exam-form/${course.examType}?code=${course.code}&action=edit`);
+                router.push(`/dashboard/exam-form/${course.examType}?code=${course.code}&action=edit`);
             } else {
                 alert('Exam type is not specified for this course.');
             }
