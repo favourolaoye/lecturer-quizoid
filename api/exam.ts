@@ -59,7 +59,7 @@ export const updateExam = async (id: string, examData: ExamData) => {
 export const deleteExam = async (courseCode: string) => {
     try {
         const token = Cookies.get('token');
-        const response = await axios.delete(`${API_URL}/${courseCode}`, {
+        const response = await axios.delete(`${API_URL}/delete-exam/${courseCode}`, {
             headers: { 'x-auth-token': token as string },
         });
         return response.data;
