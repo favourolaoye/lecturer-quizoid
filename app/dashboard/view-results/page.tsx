@@ -17,7 +17,7 @@ export default function StudentResults() {
       try {
         const lecturerID = user?.details.lecturerID;
         if (lecturerID) {
-          const response = await axios.get(`https://v2-1o3a.onrender.com/submit/${lecturerID}`);
+          const response = await axios.get(`https://v2-1o3a.onrender.com/api/submit/${lecturerID}`);
           setCourses(response.data);
         }
       } catch (err: any) {

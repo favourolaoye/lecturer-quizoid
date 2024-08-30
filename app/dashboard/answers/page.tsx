@@ -14,7 +14,7 @@ export default function Page() {
     if (lecturerID) {
       axios
         .get(
-          `https://v2-1o3a.onrender.com/answers/getStudentAnswers?lecturerID=${lecturerID}`
+          `https://v2-1o3a.onrender.com/api/answers/getStudentAnswers?lecturerID=${lecturerID}`
         )
         .then((response) => {
           setStudents(response.data);
@@ -32,7 +32,7 @@ export default function Page() {
 
   const handleDownload = (matricNo: string) => {
     window.open(
-      `http://localhost:3000/api/answers/downloadStudentAnswers?matricNo=${matricNo}`,
+      `https://v2-1o3a.onrender.com/api/answers/downloadStudentAnswers?matricNo=${matricNo}`,
       '_blank'
     );
 

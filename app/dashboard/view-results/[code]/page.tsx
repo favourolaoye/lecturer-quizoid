@@ -20,7 +20,7 @@ const CourseResults: React.FC = () => {
             
             const encodedCode = encodeURIComponent(code);
             console.log("code",encodedCode);
-            axios.get(`https://v2-1o3a.onrender.com/submit/result/${modifiedCode}`)
+            axios.get(`https://v2-1o3a.onrender.com/api/submit/result/${modifiedCode}`)
                 .then((response) => {
                     console.log('Fetched Results:', response);
                     setResults(response.data); // Ensure data is in the correct format
