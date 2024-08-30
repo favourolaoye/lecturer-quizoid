@@ -1,10 +1,11 @@
 "use client";
 
+import React, { Suspense } from 'react';
 import MultichoiceExamForm from '@/components/MultichoiceExamForm';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'react-toastify';
 
-const MultichoiceExamPage = () => {
+const MultichoiceExamPageContent = () => {
     const router = useRouter();
     const params = useSearchParams();
     const code = params.get('code');
@@ -18,6 +19,14 @@ const MultichoiceExamPage = () => {
     };
 
     return <MultichoiceExamForm courseCode={code as string} action={action as string} onSubmit={handleSubmit} title={''} />;
+};
+
+const MultichoiceExamPage = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <MultichoiceExamPageContent />
+        </Suspense>
+    );
 };
 
 export default MultichoiceExamPage;

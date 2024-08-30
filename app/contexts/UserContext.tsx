@@ -37,7 +37,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     } else {
       router.push(`/auth/login`);
     }
-  }, []);
+  }, [router]);
 
   const logout = () => {
     setUser(null);
