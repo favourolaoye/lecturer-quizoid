@@ -15,7 +15,7 @@ const ResultCard: React.FC<ResultCardProps>=({ course })=> {
   const router = useRouter();
 
   const handleViewResults = ()=> {
-    router.push(`/dashboard/lecturer/view-results/${course.courseCode}`);
+    router.push(`/dashboard/view-results/${course.courseCode}`);
   };
 
   return (

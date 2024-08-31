@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import ExamChoiceModal from '@/components/ExamChoiceModal';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { updateExam, deleteExam, checkExam } from '@/api/exam';
 import { useUser } from '@/app/contexts/UserContext';
 import axios from 'axios';
@@ -36,10 +36,8 @@ export default function ManageCourses() {
             const responseMessage = response.message || 'Unexpected error';
             if (response.status === 200) {
                 toast.error('Exam already exists for this course.');
-                // alert('Exam already exists for this course.');
                 return;
             } else {
-                // alert('exam created!');                
                 toast.success('Exam created sucessfully');
                 toast.info(responseMessage);
             }
@@ -47,8 +45,6 @@ export default function ManageCourses() {
             console.log(responseMessage);
         } catch (error: any) {
             const errorMessage = error.message || 'Unexpected error';
-    
-            // toast.error(errorMessage);
             console.log(errorMessage);
             setSelectedCourse(course);
             setIsModalOpen(true);
@@ -79,6 +75,7 @@ export default function ManageCourses() {
     const handleEditExam = async (course: Course)=> {
         try {
             const response = await checkExam(course.code);
+            console.log('clicked!');
             toast.success(response);
             console.log(response)
             if (response.status === 200) {
