@@ -47,7 +47,7 @@ export default function Sidebar() {
                 </ul>
             </div>
             <ul className="flex flex-col text-gray-400">
-                <Link href="/dashboard/lecturer/settings">
+                <Link href="/dashboard/settings">
                     <li onClick={()=>setContent('Settings')} className={`${content === 'Settings' ? 'bg-green-50 border-l-4 border-green-600 text-gray-700' : ''} flex items-center p-4 gap-4 hover:bg-green-50`}>
                         <i className='text-[17px] text-green-600'><CiSettings/></i>
                         <h2 className={`${content === 'Settings' ? 'font-medium text-gray-700':'text-gray-500'}`}>Settings</h2>

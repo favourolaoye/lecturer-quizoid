@@ -77,7 +77,7 @@ export default function ManageCourses() {
             const response = await checkExam(course.code);
             console.log('clicked!');
             // toast.success(response);
-            // console.log(response)
+            console.log(response);
             if (response.status === 200) {
                 if (course.examType) {
                 router.push(`/dashboard/exam-form/${course.examType}?code=${course.code}&action=edit`);
